@@ -120,8 +120,7 @@ For Health Check
 Run Locally
 Clone the project
 
-  git clone https://github.com/AyanGairola/yt-backend.git
-Go to the project directory
+ 
 
   cd my-project
 Install dependencies
