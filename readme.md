@@ -6,6 +6,7 @@ Project uses all standard practices like JWT, bcrypt, access tokens, refresh Tok
 Services used for storing the data- mongoDB and cloudinary
 
 Technologies Used
+
 Node.js
 
 Express.js
