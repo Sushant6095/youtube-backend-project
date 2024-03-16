@@ -140,9 +140,6 @@ I also learned how to maintain industry standard code which is readable and also
 
 Clone the project
 
-```bash
-  git clone https://github.com/AyanGairola/yt-backend.git
-```
 
 Go to the project directory
 
