@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "A YOUTUBE BACKEND project",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     
-    "dev": "nodemon index.js"
+    "dev": "nodemon -r dotenv/config --experimental-json-modules src/index.js"
   },
 
   "keywords": [
