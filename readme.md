@@ -168,3 +168,7 @@ Start the server
 [json web tokens](https://www.npmjs.com/package/jsonwebtoken)
 
 [cloudinary](https://cloudinary.com/documentation/node_integration)
+
+[cors]
+
+[expres]
