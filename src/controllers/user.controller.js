@@ -53,6 +53,10 @@ const registerUser = asyncHandler( async (req, res) => {
         throw new ApiError(409, "User with email or username already exists")
     }
     //console.log(req.files);
+     // Algo for getting the files from [0] position i.e. the first position
+
+    // const avatarLocalPath = req.files?.avatar[0]?.path; -- not working //
+    // const coverImageLocalPath = req.files?.coverImage[0]?.path; --- not working //
 
     const avatarLocalPath = req.files?.avatar[0]?.path;
     //const coverImageLocalPath = req.files?.coverImage[0]?.path;
