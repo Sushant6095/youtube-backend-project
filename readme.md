@@ -1,10 +1,36 @@
 # Youtube Backend
 
-This project is a complex backend project that is built with nodejs, expressjs, mongodb, mongoose, jwt, bcrypt, and many more. This project is a complete backend project that has all the features that a backend project should have. I tried to build a complete video hosting website similar to youtube with all the features like login, signup, upload video, like, unlike, comment, subscribe, unsubscribe, and many more.
+This project is a complex backend project that is built with nodejs, expressjs, mongodb, mongoose, jwt, bcrypt. This project is a complete backend project that has all the features that a backend project should have. I tried to build a complete video hosting website similar to youtube with all the features like login, signup, upload video, like, unlike, comment, subscribe, unsubscribe, and many more.
 
-Project uses all standard practices like JWT, bcrypt, access tokens, refresh Tokens and many more.
+## User Management
 
-Services used for storing the data- mongoDB and cloudinary
+- Registration, login, logout, update, etc.
+- Profile management.
+- Watch history tracking.
+- Password Encryption.
+
+
+## Technologies Used
+
+**Node.js**
+
+**Express.js** 
+
+**MongoDB**
+
+**Cloudinary**
+
+**JWT**
+
+**Bcrypt**
+
+**Multer**
+
+
+
+## Services used for storing the data- mongoDB and cloudinary
+
+
 
 ## Data Model
 
@@ -138,26 +164,7 @@ I also learned how to maintain industry standard code which is readable and also
 
 ## Run Locally
 
-Clone the project
 
-
-Go to the project directory
-
-```bash
-  cd my-project
-```
-
-Install dependencies
-
-```bash
-  npm install
-```
-
-Start the server
-
-```bash
-  npm run dev
-```
 
 ## Documentation
 
@@ -168,3 +175,4 @@ Start the server
 [json web tokens](https://www.npmjs.com/package/jsonwebtoken)
 
 [cloudinary](https://cloudinary.com/documentation/node_integration)
+
