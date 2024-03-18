@@ -11,11 +11,11 @@ const getChannelStats = asyncHandler(async (req, res) => {
 // TODO: Get the channel stats like total video views, total subscribers, total videos, total likes etc.
 
  // search for your channel in the DB
- 
+
  const channel = await User.findById(req.user?._id);
 
  if (!channel) {
-     throw new apiError(400, "Channel not found.");
+     throw new ApiError(400, "Channel not found.");
  }
 
  // if their is channel fetch (total videos views, total subscribers, total videos, total likes)
@@ -73,16 +73,50 @@ const getChannelStats = asyncHandler(async (req, res) => {
  // return response
  return res
  .status(200)
- .json(new apiResponse(200, channelStats, "Channel stats fetched successfully."))
+ .json(new ApiResponse(200, channelStats, "Channel stats fetched successfully."))
 
 } );
 
 
-
-
-
 const getChannelVideos = asyncHandler(async (req, res) => {
     // TODO: Get all the videos uploaded by the channel
+
+    // search for your channel in the DB
+    const channel = await User.findById(req.user?._id);
+
+    if (!channel) {
+        throw new ApiError(400, "Channel not found.");
+    }
+
+    // if their is channel fetch its videos
+    const channelVideos = await Video.aggregate([
+        {
+            $match: {
+                owner: new mongoose.Types.ObjectId(channel)
+            }
+        },
+        {
+            $project: {
+                _id: 1,
+                title: 1,
+                description: 1,
+                videoFile: 1,
+                thumbnail: 1,
+                createdAt: 1,
+            }
+        }
+    ]);
+
+    if (channelVideos.length === 0) {
+        throw new ApiError(404, "No videos were found")
+    }
+
+    // returning response
+    return res
+    .status(200)
+    .json(new ApiResponse(200, channelVideos, "Channel videos fetched successfully."))
+
+
 })
 
 export {
