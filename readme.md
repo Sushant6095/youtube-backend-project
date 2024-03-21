@@ -162,8 +162,6 @@ I also learned how to maintain industry standard code which is readable and also
 
   -`/`- GET - Return OK Status
 
-## Run Locally
-
 
 
 ## Documentation
